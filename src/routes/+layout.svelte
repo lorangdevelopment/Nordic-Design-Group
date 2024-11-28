@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
 </script>
 
+<html lang={$page.data.locale}></html>
 <svelte:head>
 	<title>{$page.data.title}</title>
 	{#if $page.data.meta_description}

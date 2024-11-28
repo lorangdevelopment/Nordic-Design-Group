@@ -14,9 +14,9 @@ export const repositoryName = import.meta.env.VITE_PRISMIC_ENVIRONMENT || sm.rep
  */
 // TODO: Update the routes array to match your project's route structure.
 const routes: prismic.ClientConfig['routes'] = [
-	{ type: 'page', path: '/', uid: 'home' },
-	{ type: 'page', path: '/:uid' }
-];
+	{ type: 'page', path: '/da-dk/:uid', lang: 'da-dk' },
+	{ type: 'page', path: '/en-us/:uid', lang: 'en-us' },
+  ];
 
 /**
  * Creates a Prismic client for the project's repository. The client is used to
@@ -27,7 +27,7 @@ const routes: prismic.ClientConfig['routes'] = [
 export const createClient = ({ cookies, ...config }: CreateClientConfig = {}) => {
 	const client = prismic.createClient(repositoryName, {
 		routes,
-		...config
+		...config,
 	});
 
 	enableAutoPreviews({ client, cookies });
