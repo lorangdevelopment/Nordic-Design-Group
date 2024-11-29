@@ -2,6 +2,11 @@
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
+	import { onMount } from 'svelte';
+	onMount(async () => {
+		const init = await import('../assets/scripts/app').then((m) => m.default);
+		init();
+	});
 </script>
 
 <html lang={$page.data.locale}></html>
