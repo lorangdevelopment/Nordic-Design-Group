@@ -6,7 +6,6 @@ import LocomotiveScroll, {
 	type ILenisScrollToOptions
 } from 'locomotive-scroll';
 
-
 export class Scroll {
 	static locomotiveScroll: LocomotiveScroll;
 	// =============================================================================
@@ -15,7 +14,7 @@ export class Scroll {
 	static init() {
 		this.locomotiveScroll = new LocomotiveScroll({
 			//Disable smoothScroll
-			lenisOptions: { 
+			lenisOptions: {
 				lerp: 0,
 				smoothWheel: false
 			},
@@ -25,7 +24,7 @@ export class Scroll {
 					limit,
 					velocity,
 					direction,
-					progress,
+					progress
 				});
 			}
 		});
