@@ -11,7 +11,7 @@ const config: CookieConsent.CookieConsentConfig = {
 				cookies: [
 					{ name: /^_ga/ }, // Match all cookies starting with '_ga'
 					{ name: '_gid' },
-					{ name: '_gat' },
+					{ name: '_gat' }
 				]
 			},
 
@@ -69,8 +69,7 @@ const config: CookieConsent.CookieConsentConfig = {
 								'Vi bruger cookies til at personliggøre indhold og forbedre din digitale oplevelse. Nogle cookies er afgørende for, at hjemmesiden kan fungere korrekt, og af sikkerhedsmæssige årsager. Disse vigtige cookies kan ikke deaktiveres.<br><br>Du kan til enhver tid aktivere eller deaktivere din tilladelse til, at cookies indsamler dine browserdata. Hvis du deaktiverer visse cookies, kan din browseroplevelse blive påvirket.<br><br>Du kan læse mere i vores <a href="/privatlivspolitik?hide-cookie-consent" target="_self" rel="">privatlivspolitik</a>.'
 						},
 						{
-							title: 
-                            'Strengt nødvendige cookies<span class="pm__badge">Nødvendige</span>',
+							title: 'Strengt nødvendige cookies<span class="pm__badge">Nødvendige</span>',
 							description:
 								'Disse cookies indstilles for at sikre, at vores hjemmeside fungerer korrekt. De kan ikke deaktiveres.',
 							linkedCategory: 'necessary',
@@ -130,7 +129,7 @@ const config: CookieConsent.CookieConsentConfig = {
 				}
 			},
 
-            en: {
+			en: {
 				consentModal: {
 					title: 'We use cookies!',
 					description:
@@ -156,8 +155,7 @@ const config: CookieConsent.CookieConsentConfig = {
 								'We use cookies to personalize content and improve your digital experience. Some cookies are essential in order for the website to function correctly and for security purposes. These essential cookies cannot be deactivated.<br><br>You can activate or deactivate your permission for cookies to collect your browsing data at any time. If you deactivate certain cookies, your browsing experience may be affected.<br><br>You can find out more in our <a href="/en-us/privacy-policy?hide-cookie-consent" target="_self" rel="">privacy policy</a>.'
 						},
 						{
-							title: 
-                            'Strictly necessary cookies<span class="pm__badge">Required</span>',
+							title: 'Strictly necessary cookies<span class="pm__badge">Required</span>',
 							description:
 								'These cookies are set to ensure that our website works correctly. They cannot be disabled.',
 							linkedCategory: 'necessary',
