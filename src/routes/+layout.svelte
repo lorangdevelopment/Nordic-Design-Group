@@ -3,6 +3,8 @@
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
 	import { onMount } from 'svelte';
+	import '../assets/styles/app.css';
+	import '../assets/cookieconsent/cookieconsent-styles.css';
 	onMount(async () => {
 		const init = await import('../assets/scripts/app').then((m) => m.default);
 		init();
