@@ -246,7 +246,7 @@ html.disable--interaction.show--consent body {
 #cc-main .cm {
 	background: var(--cc-bg);
 	border-radius: var(--cc-modal-border-radius);
-	box-shadow: 0 0.625em 1.875em rgba(0, 0, 2, 0.3);
+	box-shadow: 0 0.625em 1.875em rgba(0, 0, 2, 0.3) !important;
 	display: flex;
 	flex-direction: column;
 	max-width: 24em;
@@ -1717,8 +1717,8 @@ html.disable--interaction.show--consent body {
 }
 
 #cc-main {
-	--cc-bg: var(--color);
-	--cc-primary-color: var(--color-bg);
+	--cc-bg: var(--color-bg);
+	--cc-primary-color: var(--color);
 	--cc-secondary-color: var(--cc-primary-color);
 	--cc-separator-border-color: rgba(128, 128, 128, 0.3);
 	--cc-btn-primary-bg: var(--cc-primary-color);
@@ -1753,8 +1753,8 @@ html.disable--interaction.show--consent body {
 	--cc-footer-border-color: transparent;
 	--cc-z-index: 900;
 	--cc-font-family: ff('primary');
-	--cc-modal-border-radius: 0;
-	--cc-btn-border-radius: 0;
+	--cc-modal-border-radius: var(--border-size);
+	--cc-btn-border-radius: var(--border-size);
 }
 
 html[data-theme='primary'] #cc-main {

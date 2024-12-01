@@ -11,7 +11,6 @@ export async function load({ params, fetch, cookies }) {
 
 	return {
 		page,
-		locale: params.lang || 'da-dk',
 		title: asText(page.data.title),
 		meta_description: page.data.meta_description,
 		meta_title: page.data.meta_title,
