@@ -24,6 +24,7 @@
 		<meta name="twitter:card" content="summary_large_image" />
 	{/if}
 </svelte:head>
+<div class="page-preloader" data-page-preloader></div>
 <main>
 	<slot />
 </main>

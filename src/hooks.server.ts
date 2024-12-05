@@ -4,4 +4,3 @@ export function handle({ event, resolve }) {
 		transformPageChunk: ({ html }) => html.replace('%sveltekit.lang%', locale)
 	});
 }
-  
