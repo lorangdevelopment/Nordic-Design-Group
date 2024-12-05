@@ -143,37 +143,20 @@
 		Noto Color Emoji;
 }
 
-@supports (font-variation-settings: normal) {
-	:root {
-		font-family:
-			'NeueHaasUnica' ui-sans-serif,
-			system-ui,
-			-apple-system,
-			BlinkMacSystemFont,
-			Segoe UI,
-			Roboto,
-			Helvetica Neue,
-			Arial,
-			Noto Sans,
-			sans-serif,
-			Apple Color Emoji,
-			Segoe UI Emoji,
-			Segoe UI Symbol,
-			Noto Color Emoji;
-		font-optical-sizing: auto;
-	}
-}
-
 :root {
 	--color: #000;
 	--color-bg: #fff;
-	--color-primary: #1c19b5;
-	--menu-color: #000;
-	--menu-color-bg: #fff;
+	--grey-80: #1b1b1b;
+	--blue-100: #161721;
+	--blue-80: #1a1b27;
+	--blue-60: #3d4261;
+	--blue-40: #6279ee;
+	--blue-20: #dde9f6;
 	--border: solid var(--border-size);
 	--border-size: 0px;
-	--page-margin: 2.5rem;
-	--font-size: 15px;
+	--page-margin: 1rem;
+	/*
+		--font-size: 15px;
 	--font-size-medium: 1.73333rem;
 	--font-size-huge: 7.63889vw;
 	--font-size-h1: 4.66667rem;
@@ -182,6 +165,17 @@
 	--font-size-h4: 1.33333rem;
 	--font-size-h5: 1.2rem;
 	--font-size-h6: 1.06667rem;
+	*/
+
+	--spacing-16: 16px;
+	--spacing-20: 20px;
+	--spacing-24: 24px;
+	--spacing-32: 32px;
+	--spacing-40: 40px;
+	--spacing-60: 60px;
+	--spacing-80: 80px;
+	--spacing-120: 120px;
+	--spacing-280: 280px;
 }
 
 @media (max-width: 1024px) {
@@ -970,13 +964,13 @@ html.is-loading {
 }
 
 ::-moz-selection {
-	background: var(--color);
+	background: var(--blue-60);
 	color: var(--color-bg);
 	text-shadow: none;
 }
 
 ::selection {
-	background: var(--color);
+	background: var(--blue-60);
 	color: var(--color-bg);
 	text-shadow: none;
 }
@@ -987,3 +981,31 @@ html.is-loading {
 	outline-width: 10px;
 	outline-offset: 5px;
 }
+
+.page-preloader[data-page-preloader] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(var(--vh, 1vh) * 100);
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--color-bg);
+	padding-left: var(--page-margin);
+	padding-right: var(--page-margin);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.page-preloader[data-page-preloader] {
+		transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+}
+
+
+.page-preloader[data-page-preloader].--preloader-transitioning {
+	opacity: 0;
+	pointer-events: none;
+}
+
