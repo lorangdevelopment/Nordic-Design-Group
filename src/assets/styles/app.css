@@ -1,25 +1,165 @@
 @font-face {
-	font-family: InterVariable;
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Black.otf') format('opentype');
+	font-weight: 900;
 	font-style: normal;
-	font-weight: 100 900;
-	font-display: swap;
-	src: url('/fonts/Inter/InterVariable.woff2') format('woff2');
 }
+
 @font-face {
-	font-family: InterVariable;
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-BlackIt.otf') format('opentype');
+	font-weight: 900;
 	font-style: italic;
-	font-weight: 100 900;
-	font-display: swap;
-	src: url('/fonts/Inter/InterVariable-Italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-BoldItalic.otf') format('opentype');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Heavy.otf') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-HeavyIt.otf') format('opentype');
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Italic.otf') format('opentype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-LightIt.otf') format('opentype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-MediumIt.otf') format('opentype');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-Thin.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-ThinItalic.otf') format('opentype');
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-UltraLight.otf') format('opentype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-UltraLightIt.otf') format('opentype');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-XBlack.otf') format('opentype');
+	font-weight: 950;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NeueHaasUnica';
+	src: url('/fonts/NeueHaasUnicaW1G/NeueHaasUnicaW1G-XBlackIt.otf') format('opentype');
+	font-weight: 950;
+	font-style: italic;
 }
 
 :root {
-	font-family: 'Inter', sans-serif;
+	font-family:
+		'NeueHaasUnica',
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		Segoe UI,
+		Roboto,
+		Helvetica Neue,
+		Arial,
+		Noto Sans,
+		sans-serif,
+		Apple Color Emoji,
+		Segoe UI Emoji,
+		Segoe UI Symbol,
+		Noto Color Emoji;
 }
 
 @supports (font-variation-settings: normal) {
 	:root {
-		font-family: 'InterVariable', sans-serif;
+		font-family:
+			'NeueHaasUnica' ui-sans-serif,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			Segoe UI,
+			Roboto,
+			Helvetica Neue,
+			Arial,
+			Noto Sans,
+			sans-serif,
+			Apple Color Emoji,
+			Segoe UI Emoji,
+			Segoe UI Symbol,
+			Noto Color Emoji;
 		font-optical-sizing: auto;
 	}
 }
@@ -805,6 +945,7 @@ html {
 	-o-tab-size: 4;
 	tab-size: 4;
 	font-family:
+		'NeueHaasUnica',
 		ui-sans-serif,
 		system-ui,
 		-apple-system,
