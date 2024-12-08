@@ -6,6 +6,7 @@
 	import '../assets/styles/app.css';
 	import '../assets/cookieconsent/cookieconsent-styles.css';
 	import Preloader from '$lib/components/Preloader.svelte';
+
 	onMount(async () => {
 		const init = await import('../assets/scripts/app').then((m) => m.default);
 		init();
@@ -25,7 +26,7 @@
 		<meta name="twitter:card" content="summary_large_image" />
 	{/if}
 </svelte:head>
-<Preloader />
+<Preloader preloader_label={$page.data.preloader_label}/>
 <main>
 	<slot />
 </main>

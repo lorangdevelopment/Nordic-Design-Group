@@ -24,7 +24,7 @@ export class Preloader {
 	_onReadyCompleted() {
 		if (this.el) {
 			this.el.removeEventListener('transitionend', this._onReadyCompleted);
-			this.el.remove();
+			//this.el.remove();
 		}
 
 		document.documentElement.classList.add('--preloader-loaded');

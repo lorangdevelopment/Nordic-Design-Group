@@ -79,7 +79,82 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 	Lang
 >;
 
-export type AllDocumentTypes = PageDocument;
+type PreloaderDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Preloader documents
+ */
+interface PreloaderDocumentData {
+	/**
+	 * Preloader Label field in *Preloader*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: preloader.preloader_label
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	preloader_label: prismic.KeyTextField;
+
+	/**
+	 * Slice Zone field in *Preloader*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: preloader.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<PreloaderDocumentDataSlicesSlice> /**
+	 * Meta Title field in *Preloader*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A title of the page used for social media and search engines
+	 * - **API ID Path**: preloader.meta_title
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */;
+	meta_title: prismic.KeyTextField;
+
+	/**
+	 * Meta Description field in *Preloader*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A brief summary of the page
+	 * - **API ID Path**: preloader.meta_description
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	meta_description: prismic.KeyTextField;
+
+	/**
+	 * Meta Image field in *Preloader*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: preloader.meta_image
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Preloader document from Prismic
+ *
+ * - **API ID**: `preloader`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PreloaderDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+	Simplify<PreloaderDocumentData>,
+	'preloader',
+	Lang
+>;
+
+export type AllDocumentTypes = PageDocument | PreloaderDocument;
 
 declare module '@prismicio/client' {
 	interface CreateClient {
@@ -101,6 +176,14 @@ declare module '@prismicio/client' {
 	}
 
 	namespace Content {
-		export type { PageDocument, PageDocumentData, PageDocumentDataSlicesSlice, AllDocumentTypes };
+		export type {
+			PageDocument,
+			PageDocumentData,
+			PageDocumentDataSlicesSlice,
+			PreloaderDocument,
+			PreloaderDocumentData,
+			PreloaderDocumentDataSlicesSlice,
+			AllDocumentTypes
+		};
 	}
 }
